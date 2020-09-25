@@ -45,7 +45,7 @@ days -          days until cert expired
 ## Docker container
 Easly publish the flask app
 ```
-docker run -v /path/to/cert.pem:/certs/cert.pem -v /path/to/key.pem:/certs/key.pem certifier
+docker run -v /path/to/cert.pem:/certs/cert.pem -v /path/to/key.pem:/certs/key.pem -p 80:80 certifier
 ```
 mount the CA cert and key into `CA_CRT` and `CA_KEY` respectively.
 
