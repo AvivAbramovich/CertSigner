@@ -72,7 +72,7 @@ if __name__ == '__main__':
     args_parser = ArgumentParser()
     args_parser.add_argument('--ca_crt', help='path to CA cert', default=getenv('CA_CRT'))
     args_parser.add_argument('--ca_key', help='path to CA private key', default=getenv('CA_KEY'))
-    args_parser.add_argument('--key_len', help='the private key length', type=int, default=int(getenv('KEY_LEN', 4096)))
+    args_parser.add_argument('--key_len', help='the default private key length', type=int, default=int(getenv('KEY_LEN', 4096)))
     args_parser.add_argument('--subj', help='default subject', default=getenv('SUBJ'))
     args_parser.add_argument('--days', help='days for certificate', type=int, default=int(getenv('DAYS', 3650)))
     args_parser.add_argument('-p', help='listening port', type=int, default=80)
