@@ -10,7 +10,7 @@ signer = CertSigner.create_from_paths('/path/to/key.pem', '/path/to/cert.pem')
 
 domain = 'your.domain.com'
 days = 3650
-key_length = 3560
+key_length = 4096
 subj = '/O=my-org'  # same format as openssl req -subj xxx
 
 crt, key = signer.sign_domain(domain, days, subj, key_length)
